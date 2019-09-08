@@ -1,0 +1,3 @@
+No.of classes :15
+epoch     train_loss  valid_loss  error_rate  time    
+0         1.649326    1.648130    0.464904    1:33:17   

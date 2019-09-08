@@ -1,0 +1,16 @@
+No.of classes :14
+Traceback (most recent call last):
+  File "run.py", line 13, in <module>
+    learn = Learner(data,resnet34,metrics=error_rate)
+  File "<string>", line 19, in __init__
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 166, in __post_init__
+    self.model = self.model.to(self.data.device)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 432, in to
+    return self._apply(convert)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 230, in _apply
+    param_applied = fn(param)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 430, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: out of memory

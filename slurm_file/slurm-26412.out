@@ -1,0 +1,21 @@
+15
+Traceback (most recent call last):
+  File "prepro.py", line 41, in <module>
+    learn=cnn_learner(data,resnet50,metrics=error_rate)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 98, in cnn_learner
+    bn_final=bn_final, concat_pool=concat_pool)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 84, in create_cnn_model
+    body = create_body(base_arch, pretrained, cut)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 56, in create_body
+    model = arch(pretrained)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 196, in forward
+    x = self.conv1(x)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 343, in forward
+    return self.conv2d_forward(input, self.weight)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 340, in conv2d_forward
+    self.padding, self.dilation, self.groups)
+TypeError: conv2d(): argument 'input' (position 1) must be Tensor, not bool

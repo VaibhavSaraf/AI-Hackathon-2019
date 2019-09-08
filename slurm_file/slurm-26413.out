@@ -1,0 +1,5 @@
+15
+Traceback (most recent call last):
+  File "prepro.py", line 41, in <module>
+    learn = Learner(data,resnet34,metrics=error_rate)
+NameError: name 'resnet34' is not defined

@@ -1,0 +1,11 @@
+No.of classes :15
+Traceback (most recent call last):
+  File "run.py", line 16, in <module>
+    learn.fit_one_cycle(1, max_lr=slice(1e-6,1e-4))
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/train.py", line 18, in fit_one_cycle
+    max_lr = learn.lr_range(max_lr)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 189, in lr_range
+    if lr.start: res = even_mults(lr.start, lr.stop, len(self.layer_groups))
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/core.py", line 153, in even_mults
+    step = mult**(1/(n-1))
+ZeroDivisionError: division by zero

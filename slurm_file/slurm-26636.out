@@ -1,0 +1,7 @@
+No.of classes :728
+epoch     train_loss  valid_loss  error_rate  time    
+/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/data_block.py:534: UserWarning: You are labelling your items with CategoryList.
+Your valid set contained the following unknown labels, the corresponding items have been discarded.
+Consolidation|Fibrosis|Mass, Consolidation|Emphysema|Infiltration|Nodule|Pleural_Thickening, Atelectasis|Consolidation|Edema|Infiltration, Effusion|Nodule|Pneumonia, Edema|Pneumonia|Pneumothorax...
+  if getattr(ds, 'warn', False): warn(ds.warn)
+slurmstepd: error: *** JOB 26636 ON gpu00 CANCELLED AT 2019-09-07T18:19:49 ***

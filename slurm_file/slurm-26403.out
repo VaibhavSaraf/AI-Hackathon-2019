@@ -1,0 +1,57 @@
+Downloading: "https://download.pytorch.org/models/resnet50-19c8e357.pth" to /home/aih07/.cache/torch/checkpoints/resnet50-19c8e357.pth
+Scans found: 112120 , Total Headers 112120
+Traceback (most recent call last):
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 1244, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 1290, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 1239, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 1406, in connect
+    super().connect()
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "prepro.py", line 48, in <module>
+    learn=cnn_learner(data,resnet50,metrics=accuracy_1)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 98, in cnn_learner
+    bn_final=bn_final, concat_pool=concat_pool)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 84, in create_cnn_model
+    body = create_body(base_arch, pretrained, cut)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/vision/learner.py", line 56, in create_body
+    model = arch(pretrained)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 255, in resnet50
+    **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 217, in _resnet
+    progress=progress)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/hub.py", line 462, in load_state_dict_from_url
+    _download_url_to_file(url, cached_file, hash_prefix, progress=progress)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/hub.py", line 372, in _download_url_to_file
+    u = urlopen(url)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 1360, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/urllib/request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>

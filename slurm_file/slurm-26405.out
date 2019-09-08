@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "prepro.py", line 17, in <module>
+    .label_from_df(label_delim='|')
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/data_block.py", line 472, in _inner
+    self.train = ft(*args, from_item_lists=True, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/data_block.py", line 279, in label_from_df
+    assert labels.isna().sum().sum() == 0, f"You have NaN values in column(s) {cols} of your dataframe, please fix it."
+AssertionError: You have NaN values in column(s) 1 of your dataframe, please fix it.

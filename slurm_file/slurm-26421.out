@@ -1,0 +1,24 @@
+Process started
+15
+Fittng started
+epoch     train_loss  valid_loss  accuracy_thresh  time    
+Traceback (most recent call last):
+  File "prepro.py", line 48, in <module>
+    learn.fit_one_cycle(1)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/train.py", line 22, in fit_one_cycle
+    learn.fit(cyc_len, max_lr, wd=wd, callbacks=callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 202, in fit
+    fit(epochs, self, metrics=self.metrics, callbacks=self.callbacks+callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 101, in fit
+    loss = loss_batch(learn.model, xb, yb, learn.loss_func, learn.opt, cb_handler)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 30, in loss_batch
+    loss = loss_func(out, *yb)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/layers.py", line 238, in __call__
+    return self.func.__call__(input, target.view(-1), **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/loss.py", line 601, in forward
+    reduction=self.reduction)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/functional.py", line 2098, in binary_cross_entropy_with_logits
+    raise ValueError("Target size ({}) must be the same as input size ({})".format(target.size(), input.size()))
+ValueError: Target size (torch.Size([240])) must be the same as input size (torch.Size([16000]))

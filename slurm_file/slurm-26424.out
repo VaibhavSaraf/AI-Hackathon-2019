@@ -1,0 +1,32 @@
+No.of classes :15
+epoch     train_loss  valid_loss  error_rate  time    
+Traceback (most recent call last):
+  File "run.py", line 16, in <module>
+    learn.fit_one_cycle(1)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/train.py", line 22, in fit_one_cycle
+    learn.fit(cyc_len, max_lr, wd=wd, callbacks=callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 202, in fit
+    fit(epochs, self, metrics=self.metrics, callbacks=self.callbacks+callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 101, in fit
+    loss = loss_batch(learn.model, xb, yb, learn.loss_func, learn.opt, cb_handler)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 26, in loss_batch
+    out = model(*xb)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 203, in forward
+    x = self.layer3(x)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 107, in forward
+    out = self.bn3(out)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 81, in forward
+    exponential_average_factor, self.eps)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/functional.py", line 1656, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 128.00 MiB (GPU 0; 11.91 GiB total capacity; 11.13 GiB already allocated; 59.38 MiB free; 52.21 MiB cached)

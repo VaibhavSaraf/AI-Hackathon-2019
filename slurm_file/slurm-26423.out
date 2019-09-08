@@ -1,0 +1,32 @@
+No.of classes :15
+epoch     train_loss  valid_loss  error_rate  time    
+Traceback (most recent call last):
+  File "run.py", line 16, in <module>
+    learn.fit_one_cycle(1)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/train.py", line 22, in fit_one_cycle
+    learn.fit(cyc_len, max_lr, wd=wd, callbacks=callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 202, in fit
+    fit(epochs, self, metrics=self.metrics, callbacks=self.callbacks+callbacks)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 101, in fit
+    loss = loss_batch(learn.model, xb, yb, learn.loss_func, learn.opt, cb_handler)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/fastai/basic_train.py", line 26, in loss_batch
+    out = model(*xb)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 201, in forward
+    x = self.layer1(x)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torchvision/models/resnet.py", line 106, in forward
+    out = self.conv3(out)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 343, in forward
+    return self.conv2d_forward(input, self.weight)
+  File "/home/aih07/miniconda3/envs/x_ray/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 340, in conv2d_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 1024.00 MiB (GPU 0; 11.91 GiB total capacity; 11.03 GiB already allocated; 181.38 MiB free; 20.26 MiB cached)
